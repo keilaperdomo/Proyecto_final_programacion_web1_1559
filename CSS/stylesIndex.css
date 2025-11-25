@@ -1,0 +1,103 @@
+html{
+    font-size: 62.5%; 
+}
+
+body{
+    margin: 0;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255), pink);
+    background-repeat: no-repeat;
+    height: 100em;
+    min-height: 100vh; 
+}
+
+#encabezado{
+    height: 20vh; 
+    color: white;
+    /* Quitamos el text-align: center para que Flexbox controle la alineación */
+    display: flex;
+    font-size: 2.5em; /* Tamaño base para elementos internos */
+    justify-content: flex-start; /* Mantenemos el orden de los elementos */
+    align-items: center; /* Centrado vertical */
+    background: url(../Images/chinchanchon.jpg) bottom / contain; 
+    background-attachment: fixed;
+    padding: 0 1rem; 
+}
+
+#encabezado h1 {
+    /* 'margin: 0 auto;' hace que el h1 ocupe el espacio disponible 
+       y se centre en relación al botón y el final del encabezado */
+       font-family: "Kedebideri", sans-serif;
+    margin: 0 auto; 
+    font-size: 10rem; /* Tamaño ajustado para el título */
+    z-index: 1;
+}
+
+#check{
+    display: none;
+}
+
+/* Estilos comunes para los botones */
+.abrir, .cerrar{
+    height: 5rem;
+    width: 5rem;
+    padding: 0.5em;
+    margin-right: 1rem; /* Margen derecho para separarlo del h1 */
+    margin-left: 0.5em; /* Margen izquierdo para el padding del encabezado */
+    background-color: rgba(0, 0, 0, 0.884);
+    color: wheat;
+    text-align: center;
+    cursor: pointer;
+    font-size: 4rem; 
+    border-radius: 100%;
+    z-index: 100;
+    line-height: 1.3;
+}
+
+.cerrar{
+    display: none;
+}
+
+#navegacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 20vh;
+    left: 10; 
+    width: 25rem; 
+    max-width: 80vw; 
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.884);
+    color: goldenrod;
+    padding: 10 em;
+    z-index: 99; 
+    transform: translateX(-100%); 
+    transition: transform 0.3s ease-in-out; 
+}
+
+#navegacion a{
+    padding: 1rem; 
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: block; 
+}
+
+#navegacion a:hover{
+    background-color: rgba(255, 255, 255, 0.047);
+    color: goldenrod;
+}
+
+
+/* --- ESTILOS AL PRESIONAR EL BOTÓN (CHECKED) --- */
+#check:checked ~ #navegacion{
+    transform: translateX(0); 
+}
+
+#check:checked ~ .abrir{
+    display: none;
+} 
+
+#check:checked ~ .cerrar{
+    display: block;
+}
