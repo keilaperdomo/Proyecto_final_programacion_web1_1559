@@ -13,22 +13,19 @@ body{
 #encabezado{
     height: 20vh; 
     color: white;
-    /* Quitamos el text-align: center para que Flexbox controle la alineación */
     display: flex;
-    font-size: 2.5em; /* Tamaño base para elementos internos */
-    justify-content: flex-start; /* Mantenemos el orden de los elementos */
-    align-items: center; /* Centrado vertical */
+    font-size: 2.5em; 
+    justify-content: flex-start; 
+    align-items: center; 
     background: url(../Images/chinchanchon.jpg) bottom / contain; 
     background-attachment: fixed;
     padding: 0 1rem; 
 }
 
 #encabezado h1 {
-    /* 'margin: 0 auto;' hace que el h1 ocupe el espacio disponible 
-       y se centre en relación al botón y el final del encabezado */
        font-family: "Kedebideri", sans-serif;
     margin: 0 auto; 
-    font-size: 10rem; /* Tamaño ajustado para el título */
+    font-size: 10rem;
     z-index: 1;
 }
 
@@ -36,13 +33,13 @@ body{
     display: none;
 }
 
-/* Estilos comunes para los botones */
+
 .abrir, .cerrar{
     height: 5rem;
     width: 5rem;
     padding: 0.5em;
-    margin-right: 1rem; /* Margen derecho para separarlo del h1 */
-    margin-left: 0.5em; /* Margen izquierdo para el padding del encabezado */
+    margin-right: 1rem; 
+    margin-left: 0.5em; 
     background-color: rgba(0, 0, 0, 0.884);
     color: wheat;
     text-align: center;
@@ -89,7 +86,6 @@ body{
 }
 
 
-/* --- ESTILOS AL PRESIONAR EL BOTÓN (CHECKED) --- */
 #check:checked ~ #navegacion{
     transform: translateX(0); 
 }
