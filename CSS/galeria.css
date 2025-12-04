@@ -1,0 +1,168 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    background-image: url("../imagenes/imagenFondo.jpg");
+    padding-top: 30vh; /* MISMO tamaño que el header */
+}
+
+/* ---------- ENCABEZADO LISO ---------- */
+#encabezado {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centra el menú */
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    background-color: #260F06;
+    z-index: 1000;
+}
+
+/* ---------- TÍTULO MENÚ (CENTRO) ---------- */
+.titulo-galeria {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Shippori Mincho", serif;
+    font-size: 8rem;
+    color: goldenrod;
+    margin: 0;
+    letter-spacing: 2.5rem;
+}
+
+/* ---------- NOMBRE IROHA (DERECHA) ---------- */
+.nombre-iroha {
+    margin-left: auto; /* empuja hacia la derecha */
+    font-family: "Shippori Mincho", serif;
+    font-size: 3rem;
+    color: goldenrod;
+    margin-right: 2rem;
+}
+
+/* ---------- BOTÓN MENÚ ---------- */
+#check { 
+    display: none; 
+}
+
+.abrir, .cerrar {
+    height: 5rem;
+    width: 5rem;
+    font-size: 4rem;
+    background-color: #260F06;
+    color: wheat;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 5rem;
+    cursor: pointer;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    z-index: 20;
+}
+
+.cerrar { display: none; }
+
+/* ---------- MENÚ LATERAL ---------- */
+#navegacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 30vh; /* pegado al header */
+    left: 0;
+    width: 25rem;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 15;
+}
+
+#navegacion a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+#navegacion a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: goldenrod;
+}
+
+#check:checked ~ #navegacion {
+    transform: translateX(0);
+}
+
+#check:checked ~ .abrir {
+    display: none;
+}
+
+#check:checked ~ .cerrar {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+   RESPONSIVO - CELULARES
+   =========================== */
+@media (max-width: 600px) {
+
+  /* header reducido */
+  #encabezado {
+    height: 18vh;
+    min-height: 90px;
+    padding: 0 10px;
+    background-position: center;
+  }
+
+  /* título del menú más pequeño (usa rem para escalar con root) */
+  .titulo-galeria {
+    font-size: 3.2rem;
+    letter-spacing: 0.15rem;
+    position: relative;   /* si te molesta que quede encima del header, así lo pones normal */
+    transform: translateX(-50%);
+    margin-top: 0.6rem;
+  }
+  /* nombre iroha (más pequeño pero legible) */
+  .nombre-iroha {
+    margin-left: auto;
+    font-size: 1rem; /* ~18px */
+    margin-right: 1rem;
+  }
+
+  /* ICONOS menú más pequeños */
+  .abrir,
+  .cerrar {
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+    left: 10px;
+    top: 10px;
+  }
+
+  /* NAV desplegable: ancho en porcentaje para móviles */
+  #navegacion {
+    width: 75%;
+    padding: 10px;
+    transform: translateX(-110%);
+    height: calc(100vh - 18vh);
+  }
+
+  #navegacion a {
+    font-size: 1.8rem; /* ~18px */
+    padding: 10px;
+  }
+}

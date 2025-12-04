@@ -1,0 +1,521 @@
+/* ---------- AJUSTES GENERALES ---------- */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    background-image: url("../imagenes/imagenFondo.jpg");
+    padding-top: 30vh; /* MISMO tamaño que el header */
+}
+
+/* ---------- ENCABEZADO LISO ---------- */
+#encabezado {
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centra el menú */
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    background-color: #260F06;
+    z-index: 1000;
+}
+
+/* ---------- TÍTULO MENÚ (CENTRO) ---------- */
+.titulo-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: "Shippori Mincho", serif;
+    font-size: 8rem;
+    color: goldenrod;
+    margin: 0;
+    letter-spacing: 2.5rem;
+}
+
+/* ---------- NOMBRE IROHA (DERECHA) ---------- */
+.nombre-iroha {
+    margin-left: auto; /* empuja hacia la derecha */
+    font-family: "Shippori Mincho", serif;
+    font-size: 3rem;
+    color: goldenrod;
+    margin-right: 2rem;
+}
+
+/* ---------- BOTÓN MENÚ ---------- */
+#check { 
+    display: none; 
+}
+
+.abrir, .cerrar {
+    height: 5rem;
+    width: 5rem;
+    font-size: 4rem;
+    background-color: #260F06;
+    color: wheat;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 5rem;
+    cursor: pointer;
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    z-index: 20;
+}
+
+.cerrar { display: none; }
+
+/* ---------- MENÚ LATERAL ---------- */
+#navegacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 30vh; /* pegado al header */
+    left: 0;
+    width: 25rem;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 15;
+}
+
+#navegacion a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+#navegacion a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: goldenrod;
+}
+
+#check:checked ~ #navegacion {
+    transform: translateX(0);
+}
+
+#check:checked ~ .abrir {
+    display: none;
+}
+
+#check:checked ~ .cerrar {
+    display: block;
+}
+
+/* ===========================
+   SECCIÓN MENÚ (IMÁGENES + TEXTO)
+   =========================== */
+.contenedor-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 2.5rem;
+    width: 50%;
+    margin: 4rem auto;
+}
+
+.comida-inicio {
+    position: relative;
+    cursor: pointer;
+    border-radius: 2rem;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    height: 25rem;
+}
+
+.comida-inicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* TEXTO SIEMPRE OSCURO Y LEGIBLE */
+.comida-inicio h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1.2rem;
+    background: rgba(66, 39, 24, 0.65);
+    color: goldenrod;
+    font-family: "Shippori Mincho", serif;
+    font-size: 2.8rem;
+    text-align: center;
+    transition: 0.3s ease;
+    letter-spacing: 0.5rem;
+}
+
+/* EFECTO AL PASAR MOUSE: se oscurece más y hace zoom */
+.comida-inicio:hover h3 {
+    background: rgba(66, 39, 24, 0.90);
+}
+
+.comida-inicio:hover {
+    transform: scale(1.05);
+}
+
+/* LA IMAGEN GRANDE (Paquetes) */
+.comida-inicio.solo {
+    grid-column: span 2;
+}
+
+/* ===========================
+   RESPONSIVO - CELULARES
+   =========================== */
+@media (max-width: 600px) {
+
+  /* header reducido */
+  #encabezado {
+    height: 18vh;
+    min-height: 90px;
+    padding: 0 10px;
+    background-position: center;
+  }
+
+  /* título del menú más pequeño (usa rem para escalar con root) */
+  .titulo-menu {
+    font-size: 4rem; /* ~40px */
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 0.6rem;
+  }
+
+  /* nombre iroha (más pequeño pero legible) */
+  .nombre-iroha {
+    margin-left: auto;
+    font-size: 1.8rem; /* ~18px */
+    margin-right: 1rem;
+  }
+
+  /* ICONOS menú más pequeños */
+  .abrir,
+  .cerrar {
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+    left: 10px;
+    top: 10px;
+  }
+
+  /* NAV desplegable: ancho en porcentaje para móviles */
+  #navegacion {
+    width: 75%;
+    padding: 10px;
+    transform: translateX(-110%);
+    height: calc(100vh - 18vh);
+  }
+
+  #navegacion a {
+    font-size: 1.8rem; /* ~18px */
+    padding: 10px;
+  }
+
+  /* MENU: en móvil mejor 1 columna para que las tarjetas no queden apretadas */
+  .contenedor-menu {
+    grid-template-columns: repeat(2, 1fr); /* 1 columna en móvil */
+    gap: 1rem;
+    width: 95%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  /* Paquetes ya no debe span 2 cuando hay 1 columna */
+  .comida-inicio.solo {
+    grid-column: span 1;
+    height: 22rem; /* controla altura de las tarjetas en móvil */
+  }
+
+  /* Titulos en tarjetas un poco más pequeños */
+  .comida-inicio h3 {
+    font-size: 1.8rem; /* ~18px */
+    padding: 0.8rem;
+    bottom: 0.6rem;
+    left: 0;
+  }
+
+  /* ajuste general de la tarjeta (menos alto en móvil) */
+  .comida-inicio {
+    height: 20rem;
+  }
+}
+
+
+
+/* ---------------ENTRADAS----------------------------- */
+#navegacion-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 30vh; /* pegado al header */
+    left: 0;
+    width: 25rem;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 15;
+}
+
+#navegacion-menu a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+#navegacion-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: goldenrod;
+}
+
+#check:checked ~ #navegacion-menu {
+    transform: translateX(0);
+}
+
+#check:checked ~ .abrir {
+    display: none;
+}
+
+#check:checked ~ .cerrar {
+    display: block;
+}
+
+#titulo-entradas{
+    font-family: "Shippori Mincho", serif;
+    font-size: 6rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    letter-spacing: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------PLATOS FUERTES----------------------------- */
+#navegacion-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 30vh; /* pegado al header */
+    left: 0;
+    width: 25rem;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 15;
+}
+
+#navegacion-menu a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+#navegacion-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: goldenrod;
+}
+
+#check:checked ~ #navegacion-menu {
+    transform: translateX(0);
+}
+
+#check:checked ~ .abrir {
+    display: none;
+}
+
+#check:checked ~ .cerrar {
+    display: block;
+}
+
+#titulo-platosfuertes{
+    font-family: "Shippori Mincho", serif;
+    font-size: 6rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    letter-spacing: 1.3rem;
+}
+
+
+
+
+/* ---------------POSTRES----------------------------- */
+#navegacion-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 30vh; /* pegado al header */
+    left: 0;
+    width: 25rem;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 15;
+}
+
+#navegacion-menu a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+#navegacion-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: goldenrod;
+}
+
+#check:checked ~ #navegacion-menu {
+    transform: translateX(0);
+}
+
+#check:checked ~ .abrir {
+    display: none;
+}
+
+#check:checked ~ .cerrar {
+    display: block;
+}
+
+#titulo-postres{
+    font-family: "Shippori Mincho", serif;
+    font-size: 6rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    letter-spacing: 1.3rem;
+}
+
+
+
+
+/* ---------------BEBIDAS----------------------------- */
+#navegacion-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 30vh; /* pegado al header */
+    left: 0;
+    width: 25rem;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 15;
+}
+
+#navegacion-menu a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+#navegacion-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: goldenrod;
+}
+
+#check:checked ~ #navegacion-menu {
+    transform: translateX(0);
+}
+
+#check:checked ~ .abrir {
+    display: none;
+}
+
+#check:checked ~ .cerrar {
+    display: block;
+}
+
+#titulo-bebidas{
+    font-family: "Shippori Mincho", serif;
+    font-size: 6rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    letter-spacing: 1.3rem;
+}
+
+
+
+
+
+
+
+/* ---------------PAQUETES----------------------------- */
+#navegacion-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    top: 30vh; /* pegado al header */
+    left: 0;
+    width: 25rem;
+    height: 50vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 15;
+}
+
+#navegacion-menu a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 2rem;
+}
+
+#navegacion-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: goldenrod;
+}
+
+#check:checked ~ #navegacion-menu {
+    transform: translateX(0);
+}
+
+#check:checked ~ .abrir {
+    display: none;
+}
+
+#check:checked ~ .cerrar {
+    display: block;
+}
+
+#titulo-paquetes{
+    font-family: "Shippori Mincho", serif;
+    font-size: 6rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 0;
+    letter-spacing: 1.3rem;
+}

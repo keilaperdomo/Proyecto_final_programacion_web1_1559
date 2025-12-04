@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú いろは! - Iroha</title>
+    <link rel="stylesheet" href="CSS/menu.css">
+</head>
+<body>
+
+    <header id="encabezado">
+        <input type="checkbox" id="check">
+        <label for="check" class="abrir">☰</label>
+        <label for="check" class="cerrar">✕</label>
+
+        <h1 class="nombre-iroha">いろは</h1>
+        <h2 class="titulo-menu">MENÚ</h2>
+
+        <nav id="navegacion">
+            <a href="menu.html">Menú</a>
+            <a href="galeria.html">Galería</a>
+            <a href="promociones.html">Promociones</a>
+            <a href="index.html#pie-pagina">Contacto</a>
+            <a href="index.html">⌂</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contenedor-menu">
+
+            <div class="comida-inicio" onclick="location.href='entradas.html'">
+                <h3>Entradas</h3>
+                <img src="imagenes/imagen1EntradasMenu.jpg" alt="imagen entradas">
+            </div>
+
+            <div class="comida-inicio" onclick="location.href='platosfuertes.html'">
+                <h3>Platos fuertes</h3>
+                <img src="imagenes/imagen2PlatosFuertesMenu.jpg" alt="imagen platos fuertes">
+            </div>
+
+            <div class="comida-inicio" onclick="location.href='postres.html'">
+                <h3>Postres</h3>
+                <img src="imagenes/imagen3PostresMenu.jpg" alt="imagen postres">
+            </div>
+
+            <div class="comida-inicio" onclick="location.href='bebidas.html'">
+                <h3>Bebidas</h3>
+                <img src="imagenes/imagen4BebidasMenu.jpg" alt="imagen bebidas">
+            </div>
+
+            <div class="comida-inicio solo" onclick="location.href='paquetes.html'">
+                <h3>Paquetes</h3>
+                <img src="imagenes/imagen5PaquetesMenu.jpg" alt="imagen paquetes">
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>
