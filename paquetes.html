@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/menu.css">
-    <title>Paquetes</title>
+    <title>Paquetes いろは | Iroha – Cocina Japonesa Tradicional</title>
+    <meta name="description" content="Paquetes japoneses tradicionales: Nigiri Gozen, Shokado Bento, Sashimi Moriawase y Teishoku. Preparaciones auténticas con ingredientes frescos.">
+    <meta name="keywords" content="paquetes japoneses, nigiri gozen, shokado bento, sashimi moriawase, teishoku, comida japonesa CDMX, restaurante Iroha">
+    <meta name="authors" content="Diego Emmanuel Cabrera Brito, Ximena Solis Huerta, Keila Esmeralda Perdomo Hernández">
 </head>
 <body>
+    <!-- Encabezado y menú de hamburguesa -->
     <header id="encabezado">
         <input type="checkbox" id="check">
         <label for="check" class="abrir">☰</label>
@@ -15,6 +23,7 @@
         <h1 class="nombre-iroha">いろは</h1>
         <h2 class="titulo-menu">MENÚ</h2>
 
+         <!-- Menú para navegar en la página web -->
         <nav id="navegacion-menu">
             <a href="menu.html">Menú</a>
             <a href="entradas.html">Entradas</a>
@@ -24,9 +33,166 @@
         </nav>
     </header>
 
+    <!-- Sección del titulo del primer paquete-->
     <section id="titulo-paquetes">
-        <p>PAQUETES</p>
+        <p>NIGIRI GOZEN 鮮魚のにぎり寿司御膳</p>
     </section>
-    
+
+    <!-- SECCIÓN DE PAQUETES -->
+    <!-- Contenedor general que agrupa todos los paquetes disponibles -->
+    <section class="seccion-paquetes">
+         <!-- PRIMER PAQUETE -->
+        <!-- Cada paquete está compuesto por una imagen y 3 tamaños disponibles, cada uno con descripción y precio -->
+        <article class="paquete">
+            <!-- Imagen del paquete -->
+            <div class="paquete-imagen">
+                <img src="imagenes/paquete1.png" alt="Paquete Nigiri">
+            </div>
+
+           <!-- Contenedor con los tamaños disponibles -->
+            <div class="paquete-tamaños">
+
+                <!-- Tamaño chico -->
+                <div class="tamaño">
+                    <h4 class="tamaño-titulo">Chico</h4>
+                    <p class="tamaño-descripcion">Variedad de 6pzs de nigiris y hosomaki, acompañados de tempura de 3 vegetales.</p>
+                    <p class="tamaño-precio"><strong>Precio: $490</strong></p>
+                </div>
+
+                <!-- Tamaño mediano -->
+                <div class="tamaño">
+                    <h4 class="tamaño-titulo">Mediano</h4>
+                    <p class="tamaño-descripcion">Variedad de 8pzs de nigiris, tamago y hosomaki, acompañados de tempura de 3 vegetales y 2 camarones.</p>
+                    <p class="tamaño-precio"><strong>Precio: $750</strong></p>
+                </div>
+
+                <!-- Tamaño grande -->
+                <div class="tamaño">
+                    <h4 class="tamaño-titulo">Grande</h4>
+                    <p class="tamaño-descripcion">Variedad de 12pzs de nigiris premium, tamago, y hosomaki, acompañados de tempura mixta (vegetales y mariscos) y sopa miso.</p>
+                    <p class="tamaño-precio"><strong>Precio: $1,100</strong></p>
+                </div>
+
+            </div>
+        </article>
+
+         <!-- Sección del titulo del segundo paquete-->
+        <section id="titulo-paquetes">
+            <p>SHOKADO BENTO 松花堂弁当</p>
+         </section>
+
+
+        <!-- SEGUNDO PAQUETE -->
+        <!-- Cada paquete está compuesto por una imagen y 3 tamaños disponibles, cada uno con descripción y precio -->
+        <article class="paquete">
+            <!-- Imagen del paquete -->
+            <div class="paquete-imagen">
+                <img src="imagenes/paquete2.png" alt="Paquete Shokado Bento">
+            </div>
+
+             <!-- Contenedor con los tamaños disponibles -->
+            <div class="paquete-tamaños">
+
+                <!-- Tamaño chico -->
+                <div class="tamaño">
+                    <h4 class="tamaño-titulo">Chico</h4>
+                    <p class="tamaño-descripcion">Ración combinada de arroz, tempura, sashimi (4pzs) y bacalao miso.</p>
+                    <p class="tamaño-precio"><strong>Precio: $590</strong></p>
+                </div>
+
+                <!-- Tamaño mediano -->
+                <div class="tamaño">
+                    <h4 class="tamaño-titulo">Mediano</h4>
+                    <p class="tamaño-descripcion">Ración combinada de arroz, tempura, sashimi (6pzs), hosomak, y bacalao miso.</p>
+                    <p class="tamaño-precio"><strong>Precio: $880</strong></p>
+                </div>
+
+                <!-- Tamaño grande -->
+                <div class="tamaño">
+                    <h4 class="tamaño-titulo">Grande</h4>
+                    <p class="tamaño-descripcion">Ración combinada de arroz, tempura mixta, sashimi (8pzs), hosomak, battera salmón (4pzs) y bacalao miso.</p>
+                    <p class="tamaño-precio"><strong>Precio: $1,250</strong></p>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- Sección del titulo del tercer paquete-->
+        <section id="titulo-paquetes">
+            <p>SASHIMI MORIAWASE 刺身盛り合わせ</p>
+         </section>
+
+        <!-- TERCER PAQUETE -->
+        <!-- Cada paquete está compuesto por una imagen y 3 tamaños disponibles, cada uno con descripción y precio -->
+        <article class="paquete">
+            <!-- Imagen del paquete -->
+            <div class="paquete-imagen">
+                <img src="imagenes/paquete3.png" alt="Paquete Sashimi Moriawase">
+            </div>
+                <!-- Contenedor con los tamaños disponibles -->
+                <div class="paquete-tamaños">
+                    <!-- Tamaño chico -->
+                    <div class="tamaño">
+                        <h4 class="tamaño-titulo">Chico</h4>
+                        <p class="tamaño-descripcion">Selección de 15 rebanadas de 3 tipos de pescado fresco del día.</p>
+                        <p class="tamaño-precio"><strong>Precio: $690</strong></p>
+                    </div>
+
+                    <!-- Tamaño mediano -->
+                    <div class="tamaño">
+                        <h4 class="tamaño-titulo">Mediano</h4>
+                        <p class="tamaño-descripcion">Selección de 25 rebanadas de 5 tipos de pescado y marisco fresco del día.</p>
+                        <p class="tamaño-precio"><strong>Precio: $1,050</strong></p>
+                    </div>
+
+                    <!-- Tamaño grande -->
+                    <div class="tamaño">
+                        <h4 class="tamaño-titulo">Grande</h4>
+                        <p class="tamaño-descripcion">Selección de 40 rebanadas de 7 tipos de pescado y marisco premium, incluye uni (erizo) y toro (atún graso).</p>
+                        <p class="tamaño-precio"><strong>Precio: $1,850</strong></p>
+                    </div>
+                </div>
+        </article>
+
+
+        <!-- Sección del titulo del tercer paquete-->
+        <section id="titulo-paquetes">
+                <p>TEISHOKU 定食</p>
+            </section>
+
+             <!-- CUARTO PAQUETE -->
+            <!-- Cada paquete está compuesto por una imagen y 3 tamaños disponibles, cada uno con descripción y precio -->
+            <article class="paquete">
+                <!-- Imagen del paquete -->
+                <div class="paquete-imagen">
+                    <img src="imagenes/paquete4.png" alt="Paquete Teishoku">
+                </div>
+
+                <!-- Contenedor con los tamaños disponibles -->
+                    <div class="paquete-tamaños">
+                        <!-- Tamaño chico -->
+                        <div class="tamaño">
+                            <h4 class="tamaño-titulo">Chico</h4>
+                            <p class="tamaño-descripcion">Platillo principal (a elegir entre Teriyaki de pollo o Katsu de cerdo) con arroz, ensalada y sopa miso.</p>
+                            <p class="tamaño-precio"><strong>Precio: $390</strong></p>
+                        </div>
+
+                        <!-- Tamaño mediano -->
+                        <div class="tamaño">
+                            <h4 class="tamaño-titulo">Mediano</h4>
+                            <p class="tamaño-descripcion">Platillo principal (a elegir entre Teriyaki de salmón o Tofu a la parrilla) con arroz, ensalada, sopa miso y 2 gyozas.</p>
+                            <p class="tamaño-precio"><strong>Precio: $550</strong></p>
+                        </div>
+
+                        <!-- Tamaño grande -->
+                        <div class="tamaño">
+                            <h4 class="tamaño-titulo">Grande</h4>
+                            <p class="tamaño-descripcion">Platillo principal (Wagyu a la parrilla o Tempura mixta) con arroz especial, ensalada, tsukemono (encurtidos) y sopa sumashi (clara).</p>
+                            <p class="tamaño-precio"><strong>Precio: $790</strong></p>
+                        </div>
+                    </div>
+            </article>
+
+    </section>  
 </body>
 </html>

@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/menu.css">
-    <title>Platos Fuertes</title>
+    <title>Platos Fuertes いろは | Iroha – Cocina Japonesa Tradicional</title>
+    <meta name="description" content="Explora los platos fuertes del menú de Iroha: ramen, nigiri, wagyu, sashimi, sukiyaki, tempura y otros sabores auténticos de Japón.">
+    <meta name="keywords" content="platos fuertes japoneses, ramen, nigiri, wagyu, sashimi, tempura, sukiyaki, comida japonesa CDMX, Iroha">
+    <meta name="authors" content="Diego Emmanuel Cabrera Brito, Ximena Solis Huerta, Keila Esmeralda Perdomo Hernández">
 </head>
 <body>
+
+    <!-- Encabezado y menú de hamburguesa -->
     <header id="encabezado">
         <input type="checkbox" id="check">
         <label for="check" class="abrir">☰</label>
@@ -15,6 +24,7 @@
         <h1 class="nombre-iroha">いろは</h1>
         <h2 class="titulo-menu">MENÚ</h2>
 
+        <!-- Menú para navegar en la página web -->
         <nav id="navegacion-menu">
             <a href="menu.html">Menú</a>
             <a href="entradas.html">Entradas</a>
@@ -24,9 +34,105 @@
         </nav>
     </header>
 
+    <!-- Sección de título principal Platos Fuertes-->
     <section id="titulo-platosfuertes">
         <p>PLATOS FUERTES</p>
     </section>
-    
+
+    <!-- Contenedor principal de los platos fuertes -->
+     <!-- Tiene todos los platillos fuertes del restaurante. -->
+    <section class="seccion-platos-fuertes">
+        <article class="platos-fuertes">
+
+             <!-- Foto, nombre del platillo, descripción y precio -->
+            <div class="platos-fuertes-imagen">
+            <img src="imagenes/plato1.jpg" alt="Tradicional ramen">
+            <span class="platos-fuertes-titulo">CLASSIC TOKYO RAMEN 醤油ラーメン</span>
+            </div>
+            <p class="platos-fuertes-descripcion">Tradicional ramen con caldo a base de pescado y salsa de soya, con un toque de pescado.
+            <br><strong>Precio: $395 / 200g </strong></p>
+        </article>
+
+         <!-- Foto, nombre del platillo, descripción y precio -->
+        <article class="platos-fuertes">
+            <div class="platos-fuertes-imagen">
+            <img src="imagenes/plato2.jpg" alt="Nigir mixto">
+            <span class="platos-fuertes-titulo">OMAKASE NIGIRI おまかせ握り盛り合わせ</span>
+            </div>
+            <p class="platos-fuertes-descripcion">Nigiri mixto del día.
+            <br><strong>$695 / 12pzs </strong></p>
+        </article>
+
+         <!-- Foto, nombre del platillo, descripción y precio -->
+        <article class="platos-fuertes">
+            <div class="platos-fuertes-imagen">
+            <img src="imagenes/plato3.jpg" alt="Roastbeef">
+            <span class="platos-fuertes-titulo">WAGYU ROASTBEEF DON <br>和牛ローストビーフ丼</span>
+            </div>
+            <p class="platos-fuertes-descripcion">Roastbeef de wagyu importado de japón con su jugo.
+            <br><strong>Precio: $590 / 180g </strong></p>
+        </article>
+
+         <!-- Foto, nombre del platillo, descripción y precio -->
+        <article class="platos-fuertes">
+            <div class="platos-fuertes-imagen">
+            <img src="imagenes/plato4.jpg" alt="Mixto de sashimi">
+            <span class="platos-fuertes-titulo">SASHIMI TEISHOKU 刺身定食</span>
+            </div>
+            <p class="platos-fuertes-descripcion">Mixto de sashimi fresca del día, acompañada de tempura.
+            <br><strong>Precio: $575 / 200g </strong></p>
+        </article>
+
+         <!-- Foto, nombre del platillo, descripción y precio -->
+        <article class="platos-fuertes">
+            <div class="platos-fuertes-imagen">
+            <img src="imagenes/plato5.jpg" alt="Carne de wagyu en salsa dulce de roya">
+            <span class="platos-fuertes-titulo">SUKIYAKI すき焼き</span>
+            </div>
+            <p class="platos-fuertes-descripcion">Carne de wagyu preparado en salsa dulce de roya con negi, shirataki, hoja de crisantemo, tofu, achicoria y shitake.
+            <br><strong>Precio: $1,560 / 260g </strong></p>
+        </article>
+
+         <!-- Foto, nombre del platillo, descripción y precio -->
+        <article class="platos-fuertes">
+            <div class="platos-fuertes-imagen">
+            <img src="imagenes/plato6.jpg" alt="Camarones y vegetales">
+            <span class="platos-fuertes-titulo">TEMPURA MORIAWASE 天ぷら盛り合わせ</span>
+            </div>
+            <p class="platos-fuertes-descripcion">Selección de camarones y vegetales fritos en una ligera y crujiente tempura, servidos con salsa tentsuyu. 
+            <br><strong>Precio: $520 / 8pzs </strong></p>
+        </article>
+
+         <!-- Foto, nombre del platillo, descripción y precio -->
+         <article class="platos-fuertes">
+            <div class="platos-fuertes-imagen">
+            <img src="imagenes/plato7.jpg" alt="Frito de pollo">
+            <span class="platos-fuertes-titulo">TORI KARA TEISHOKU 鶏唐揚げ定食</span>
+            </div>
+            <p class="platos-fuertes-descripcion">Frito de pollo marinado de salsa de soya, ajo y jengibre. 
+            <br><strong>Precio: $290 / 200g </strong></p>
+        </article>
+
+         <!-- Foto, nombre del platillo, descripción y precio -->
+        <article class="platos-fuertes">
+            <div class="platos-fuertes-imagen">
+            <img src="imagenes/plato8.jpg" alt="Rebanada de wagyu">
+            <span class="platos-fuertes-titulo">WAGYU CHILI 和牛チリ</span>
+            </div>
+            <p class="platos-fuertes-descripcion">Rebanada de wagyu importado de japón con salsa de anguila y poro frito. 
+            <br><strong>Precio: $430 / 65g </strong></p>
+        </article>
+
+         <!-- Foto, nombre del platillo, descripción y precio -->
+        <article class="platos-fuertes">
+            <div class="platos-fuertes-imagen">
+            <img src="imagenes/plato9.jpg" alt="Anguila de río">
+            <span class="platos-fuertes-titulo">UNAGI KABAYAKI うなぎの蒲焼き</span>
+            </div>
+            <p class="platos-fuertes-descripcion">Anguila de río glaseada a la parrilla con una salsa dulce a base de soya, servida sobre una cama de arroz. 
+            <br><strong>Precio: $780 / 150g </strong></p>
+        </article>
+   
+    </section> 
 </body>
 </html>
