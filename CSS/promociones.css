@@ -6,6 +6,7 @@ body {
     margin: 0;
     background-image: url("../imagenes/imagenFondo.jpg");
     padding-top: 30vh; /* MISMO tamaño que el header */
+    font-family: "Shippori Mincho", serif;
 }
 
 /* ---------- ENCABEZADO LISO ---------- */
@@ -41,6 +42,8 @@ body {
     font-size: 3rem;
     color: goldenrod;
     margin-right: 2rem;
+    text-decoration: none;
+    font-weight: bolder
 }
 
 /* ---------- BOTÓN MENÚ ---------- */
@@ -106,3 +109,63 @@ body {
 #check:checked ~ .cerrar {
     display: block;
 }
+
+/* ---------- CONTENEDOR DE PROMOCIONES ---------- */
+
+.promociones{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2.5rem;
+    width: 50%;
+    margin: 4rem auto;
+    border-radius: 2rem;
+    transition: transform 0.4s ease-in-out;
+}
+/* Wow efecto al pasarle el mouse a la promo que quieres ver :O */
+.promociones:hover{
+    filter: brightness(1.2);
+    background-color: rgba(0, 0, 0, 0.65);
+    background-image: linear-gradient(169deg,rgba(255, 255, 255, 0.10), rgba(136, 136, 136, 0), rgba(0, 0, 0, 0.65));
+    transform: scale(1.2);
+    text-shadow: 0 0 3rem rgba(255, 255, 255, 0.25);
+    box-shadow: 1rem 1rem 3rem black;
+}
+/* Aquí ajustamos todas las imagenes a que queden igual y cuadrado */
+.promociones img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 2rem;
+    object-fit: cover;
+    display: block;
+}
+/* Ajustamos para que el texto use 2 columnas del grid y lo centramos */
+.textopromocion{
+    grid-column: span 2;
+    justify-content: baseline;
+    align-content: center;
+}
+/* Aquí ajustamos el small al gusto */
+small{
+    font-size: 1.3rem;
+}
+/* Ajustamos el título para que se vea perron */
+.titulopromocion{
+    bottom: 0;
+    font-family: "Lora", serif;
+    color: goldenrod;
+    font-size: 3rem;
+    text-align: left;
+    letter-spacing: 0.2rem;
+}
+/* Ajustamos el texto de la descripción */
+.textopromocion{
+    color: white;
+    text-align: justify;
+    font-size: 1.9rem;  
+    max-width: 120rem;
+    margin-right: 1rem;
+}
+
+/* Profe presione las letras chinas del encabezado de promociones es un tutorial para unos atajos de acá CSS 👀 */
+/* Att: Ximena Solis Huerta */
+/* UwU */
