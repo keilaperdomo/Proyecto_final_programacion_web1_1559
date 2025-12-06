@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/menu.css">
-    <title>Postres</title>
+    <title>Postres いろは | Iroha – Cocina Japonesa Tradicional</title>
+    <meta name="description" content="Descubre los postres de Iroha: mochi helado, tiramisú de matcha, strawberry cream cake, pastel de matcha, roll cake y dorayaki.">
+    <meta name="keywords" content="postres japoneses, mochi helado, tiramisú matcha, pastel japonés, dorayaki, repostería japonesa, Iroha CDMX">
+    <meta name="authors" content="Diego Emmanuel Cabrera Brito, Ximena Solis Huerta, Keila Esmeralda Perdomo Hernández">
 </head>
 <body>
+
+    <!-- Encabezado y menú de hamburguesa -->
     <header id="encabezado">
         <input type="checkbox" id="check">
         <label for="check" class="abrir">☰</label>
@@ -15,6 +24,7 @@
         <h1 class="nombre-iroha">いろは</h1>
         <h2 class="titulo-menu">MENÚ</h2>
 
+        <!-- Menú para navegar en la página web -->
         <nav id="navegacion-menu">
             <a href="menu.html">Menú</a>
             <a href="entradas.html">Entradas</a>
@@ -24,9 +34,74 @@
         </nav>
     </header>
 
+    <!-- Sección del título principal Postres -->
     <section id="titulo-postres">
         <p>POSTRES</p>
     </section>
-    
+
+    <!-- Contenedor de todos los postres -->
+    <section class="seccion-postres">
+        <article class="postres">
+
+            <!-- Foto, nombre del postre, descripción y precio -->
+            <div class="postres-imagen">
+            <img src="imagenes/postre1.png" alt="Helado">
+            <span class="postres-titulo">MOCHI HELADO 大福アイス</span>
+            </div>
+            <p class="postres-descripcion">Helado y crema batida cubiertos con mochi, servido con frutas.
+            <br><strong>Precio: $120 / 170g </strong></p>
+        </article>
+
+          <!-- Foto, nombre del postre, descripción y precio -->
+        <article class="postres">
+            <div class="postres-imagen">
+            <img src="imagenes/postre2.jpg" alt="Tiramisú de matcha">
+            <span class="postres-titulo">MATCHA GARDEN 箱庭風抹茶ティラミス</span>
+            </div>
+            <p class="postres-descripcion">Tiramisú de matcha preparado en cajita de MASU como jardín japonés.
+            <br><strong>Precio: $120 / 70g </strong></p>
+        </article>
+
+          <!-- Foto, nombre del postre, descripción y precio -->
+        <article class="postres">
+            <div class="postres-imagen">
+            <img src="imagenes/postre3.jpg" alt="Pastel de crema con fresas">
+            <span class="postres-titulo">STRAWBERRY CREAM CAKE <br>のショートケーキ</span>
+            </div>
+            <p class="postres-descripcion">Patel de crema batida importada de Francia con fresa.
+            <br><strong>Precio: $130 / 140gr </strong></p>
+        </article>
+
+          <!-- Foto, nombre del postre, descripción y precio -->
+        <article class="postres">
+            <div class="postres-imagen">
+            <img src="imagenes/postre4.jpg" alt="Pastel de matcha">
+            <span class="postres-titulo">PASTEL DE MATCHA 抹茶ケーキ</span>
+            </div>
+            <p class="postres-descripcion">Pastel de matcha y crema batida servido con fresas.
+            <br><strong>Precio: $115 /80g </strong></p>
+        </article>
+
+          <!-- Foto, nombre del postre, descripción y precio -->
+        <article class="postres">
+            <div class="postres-imagen">
+            <img src="imagenes/postre5.jpg" alt="Pastel swiss roll">
+            <span class="postres-titulo">PASTEL ROLL ロールケーキ</span>
+            </div>
+            <p class="postres-descripcion">Pastel Swiss roll de frutas.
+            <br><strong>Precio: $100 / 100g </strong></p>
+        </article>
+
+          <!-- Foto, nombre del postre, descripción y precio -->
+        <article class="postres">
+            <div class="postres-imagen">
+            <img src="imagenes/postre6.jpg" alt="Panqueques rellenos de anko">
+            <span class="postres-titulo">DORAYAKI どら焼き</span>
+            </div>
+            <p class="postres-descripcion">Panqueques esponjosos rellenos de anko (pasta dulce de frijol rojo azuki). 
+            <br><strong>Precio: $190 / 2pzs </strong></p>
+        </article>
+
+    </section>  
 </body>
 </html>

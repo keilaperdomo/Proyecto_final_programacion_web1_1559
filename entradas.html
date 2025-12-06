@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/menu.css">
-    <title>Entradas</title>
+    <title>Entradas いろは | Iroha – Cocina Japonesa Tradicional</title>
+   <meta name="description" content="Descubre las entradas del menú de Iroha: edamame, natto, tsukemono, ensalada de alga, gyoza, tempura y más sabores tradicionales japoneses.">
+    <meta name="keywords" content="entradas japonesas, edamame, gyoza, tempura, comida japonesa, restaurante japonés CDMX, Iroha">
+    <meta name="authors" content="Diego Emmanuel Cabrera Brito, Ximena Solis Huerta, Keila Esmeralda Perdomo Hernández">
 </head>
 <body>
+
+    <!-- Encabezado y menú de hamburguesa -->
     <header id="encabezado">
         <input type="checkbox" id="check">
         <label for="check" class="abrir">☰</label>
@@ -15,6 +24,7 @@
         <h1 class="nombre-iroha">いろは</h1>
         <h2 class="titulo-menu">MENÚ</h2>
 
+        <!-- Menú para navegar en la página web -->
         <nav id="navegacion-menu">
             <a href="menu.html">Menú</a>
             <a href="platosfuertes.html">Platos Fuertes</a>
@@ -24,9 +34,75 @@
         </nav>
     </header>
 
+    <!-- Sección del título principal Entradas -->
     <section id="titulo-entradas">
         <p>ENTRADAS</p>
     </section>
-    
+ 
+    <!-- Sección principal de entradas -->
+     <!-- Contiene todas las entradas del menú -->
+    <section class="seccion-entradas">
+
+        <!-- Foto, nombre de la entrada, descripción y precio -->
+        <article class="entradas">
+            <div class="entrada-imagen">
+            <img src="imagenes/entrada1.jpg" alt="Vainas de soya">
+            <span class="entrada-titulo">EDAMAME 枝豆</span>
+            </div>
+            <p class="entrada-descripcion">Botana de vainas de soya inmaduras al vapor estilo japonés.
+            <br><strong>Precio: $75 / 100g </strong></p>
+        </article>
+
+        <!-- Foto, nombre de la entrada, descripción y precio -->
+        <article class="entradas">
+            <div class="entrada-imagen">
+            <img src="imagenes/entrada2.jpeg" alt="Frijoles de soya">
+            <span class="entrada-titulo">TAKANA NATTO 高菜納豆</span>
+            </div>
+            <p class="entrada-descripcion">Frijoles de soya fermentados con hojas de mostaza preparadas.
+            <br><strong>Precio: $85 / 50g </strong></p>
+        </article>
+
+        <!-- Foto, nombre de la entrada, descripción y precio -->
+        <article class="entradas">
+            <div class="entrada-imagen">
+            <img src="imagenes/entrada3.jpg" alt="Mixto de verduras">
+            <span class="entrada-titulo">TSUKEMONO 漬物</span>
+            </div>
+            <p class="entrada-descripcion">Mixto de verduras encurtidas.
+            <br><strong>Precio: $115 / 120g </strong></p>
+        </article>
+
+        <!-- Foto, nombre de la entrada, descripción y precio -->
+        <article class="entradas">
+            <div class="entrada-imagen">
+            <img src="imagenes/entrada4.jpg" alt="Ensalada de alga">
+            <span class="entrada-titulo">ENSALADA DE ALGA 海藻サラダ</span>
+            </div>
+            <p class="entrada-descripcion">Ensalada de alga con ponzu.
+            <br><strong>Precio: $130 / 150g </strong></p>
+        </article>
+
+        <!-- Foto, nombre de la entrada, descripción y precio -->
+        <article class="entradas">
+            <div class="entrada-imagen">
+            <img src="imagenes/entrada5.jpg" alt="Ravioles rellenos">
+            <span class="entrada-titulo">GYOZA 餃子</span>
+            </div>
+            <p class="entrada-descripcion">Ravioles estilo chino relleno de carne y verduras.
+            <br><strong>Precio: $115 / 8 pzs </strong></p>
+        </article>
+
+        <!-- Foto, nombre de la entrada, descripción y precio -->
+        <article class="entradas">
+            <div class="entrada-imagen">
+            <img src="imagenes/entrada6.jpg" alt="Sashimi mixto">
+            <span class="entrada-titulo">TEMPURA CAMARON AZUL の天ぷら</span>
+            </div>
+            <p class="entrada-descripcion">Tempura de camarón azul. 
+            <br><strong>Precio: $65 / 25g </strong></p>
+        </article>
+
+    </section>  
 </body>
 </html>

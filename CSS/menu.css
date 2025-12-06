@@ -1,4 +1,4 @@
-/* ---------- AJUSTES GENERALES ---------- */
+/* Ajustes generales de tamaño y fondo */
 html {
     font-size: 62.5%;
 }
@@ -6,16 +6,16 @@ html {
 body {
     margin: 0;
     background-image: url("../imagenes/imagenFondo.jpg");
-    padding-top: 30vh; /* MISMO tamaño que el header */
+    padding-top: 30vh; 
 }
 
-/* ---------- ENCABEZADO LISO ---------- */
+/* Encabezado fijo con título centrado y nombre a la derecha */
 #encabezado {
     width: 100%;
     height: 30vh;
     display: flex;
     align-items: center;
-    justify-content: center; /* centra el menú */
+    justify-content: center;
     padding: 0 1rem;
     position: fixed;
     top: 0;
@@ -23,7 +23,7 @@ body {
     z-index: 1000;
 }
 
-/* ---------- TÍTULO MENÚ (CENTRO) ---------- */
+/* Título grande en el centro del encabezado */
 .titulo-menu {
     position: absolute;
     left: 50%;
@@ -35,16 +35,16 @@ body {
     letter-spacing: 2.5rem;
 }
 
-/* ---------- NOMBRE IROHA (DERECHA) ---------- */
+/* Nombre Iroha alineado a la derecha */
 .nombre-iroha {
-    margin-left: auto; /* empuja hacia la derecha */
+    margin-left: auto;
     font-family: "Shippori Mincho", serif;
     font-size: 3rem;
     color: goldenrod;
     margin-right: 2rem;
 }
 
-/* ---------- BOTÓN MENÚ ---------- */
+/* Botones para abrir y cerrar el menú lateral */
 #check { 
     display: none; 
 }
@@ -54,7 +54,7 @@ body {
     width: 5rem;
     font-size: 4rem;
     background-color: #260F06;
-    color: wheat;
+    color: white;
     border-radius: 100%;
     text-align: center;
     line-height: 5rem;
@@ -67,13 +67,13 @@ body {
 
 .cerrar { display: none; }
 
-/* ---------- MENÚ LATERAL ---------- */
+/* Menú lateral oculto que aparece al activar el checkbox */
 #navegacion {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     position: fixed;
-    top: 30vh; /* pegado al header */
+    top: 30vh;
     left: 0;
     width: 25rem;
     height: 50vh;
@@ -96,6 +96,7 @@ body {
     color: goldenrod;
 }
 
+/* Estados del menú al abrir */
 #check:checked ~ #navegacion {
     transform: translateX(0);
 }
@@ -108,34 +109,33 @@ body {
     display: block;
 }
 
-/* ===========================
-   SECCIÓN MENÚ (IMÁGENES + TEXTO)
-   =========================== */
+/* Sección del menú con las tarjetas de comida */
 .contenedor-menu {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
     width: 50%;
     margin: 4rem auto;
 }
 
+/* Tarjetas con imagen, sombra y efecto de zoom */
 .comida-inicio {
     position: relative;
     cursor: pointer;
     border-radius: 2rem;
     overflow: hidden;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
     height: 25rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.45);
 }
 
 .comida-inicio img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-/* TEXTO SIEMPRE OSCURO Y LEGIBLE */
+/* Título del platillo superpuesto */
 .comida-inicio h3 {
     position: absolute;
     bottom: 0;
@@ -148,113 +148,33 @@ body {
     font-size: 2.8rem;
     text-align: center;
     transition: 0.3s ease;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
 }
 
-/* EFECTO AL PASAR MOUSE: se oscurece más y hace zoom */
+/* Efecto hover: oscurecer el texto y ampliar la tarjeta */
 .comida-inicio:hover h3 {
     background: rgba(66, 39, 24, 0.90);
 }
 
 .comida-inicio:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.55)
 }
 
-/* LA IMAGEN GRANDE (Paquetes) */
+/* Tarjeta que ocupa dos columnas */
 .comida-inicio.solo {
     grid-column: span 2;
 }
 
-/* ===========================
-   RESPONSIVO - CELULARES
-   =========================== */
-@media (max-width: 600px) {
-
-  /* header reducido */
-  #encabezado {
-    height: 18vh;
-    min-height: 90px;
-    padding: 0 10px;
-    background-position: center;
-  }
-
-  /* título del menú más pequeño (usa rem para escalar con root) */
-  .titulo-menu {
-    font-size: 4rem; /* ~40px */
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-    letter-spacing: 0.6rem;
-  }
-
-  /* nombre iroha (más pequeño pero legible) */
-  .nombre-iroha {
-    margin-left: auto;
-    font-size: 1.8rem; /* ~18px */
-    margin-right: 1rem;
-  }
-
-  /* ICONOS menú más pequeños */
-  .abrir,
-  .cerrar {
-    width: 45px;
-    height: 45px;
-    font-size: 26px;
-    left: 10px;
-    top: 10px;
-  }
-
-  /* NAV desplegable: ancho en porcentaje para móviles */
-  #navegacion {
-    width: 75%;
-    padding: 10px;
-    transform: translateX(-110%);
-    height: calc(100vh - 18vh);
-  }
-
-  #navegacion a {
-    font-size: 1.8rem; /* ~18px */
-    padding: 10px;
-  }
-
-  /* MENU: en móvil mejor 1 columna para que las tarjetas no queden apretadas */
-  .contenedor-menu {
-    grid-template-columns: repeat(2, 1fr); /* 1 columna en móvil */
-    gap: 1rem;
-    width: 95%;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
-
-  /* Paquetes ya no debe span 2 cuando hay 1 columna */
-  .comida-inicio.solo {
-    grid-column: span 1;
-    height: 22rem; /* controla altura de las tarjetas en móvil */
-  }
-
-  /* Titulos en tarjetas un poco más pequeños */
-  .comida-inicio h3 {
-    font-size: 1.8rem; /* ~18px */
-    padding: 0.8rem;
-    bottom: 0.6rem;
-    left: 0;
-  }
-
-  /* ajuste general de la tarjeta (menos alto en móvil) */
-  .comida-inicio {
-    height: 20rem;
-  }
-}
-
-
 
 /* ---------------ENTRADAS----------------------------- */
+/* Menú lateral fijo para la sección de Entradas */
 #navegacion-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     position: fixed;
-    top: 30vh; /* pegado al header */
+    top: 30vh; 
     left: 0;
     width: 25rem;
     height: 50vh;
@@ -277,6 +197,7 @@ body {
     color: goldenrod;
 }
 
+/* Estados del menú al abrirlo con checkbox */
 #check:checked ~ #navegacion-menu {
     transform: translateX(0);
 }
@@ -289,26 +210,92 @@ body {
     display: block;
 }
 
+/* Título principal de la sección Entradas */
 #titulo-entradas{
     font-family: "Shippori Mincho", serif;
-    font-size: 6rem;
+    font-size: 4.5rem;
     text-align: center;
     color: rgb(255, 255, 255);
     margin: 0;
     letter-spacing: 1.3rem;
 }
 
+/* Grid general de las tarjetas de Entradas */
+.seccion-entradas {
+  width: 85%;
+  max-width: 1200px;
+  margin: 3.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+  gap: 7rem;
+  align-items: start;
+}
 
+/* Contenedor de cada tarjeta de entrada */
+.entradas{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  color: white;
+}
 
+/* Imagen con overlay y sombra */
+.entrada-imagen {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: black;
+  height: 25rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.486);
+}
 
+/* Imagen recortada con cover */
+.entrada-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
 
+/* Banda inferior con título pequeño del platillo */
+.entrada-titulo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 0.5rem;
+  background: rgba(66, 39, 24, 0.90);
+  color: goldenrod;
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  text-align: center;
+  letter-spacing: 0.02rem;
+}
 
+/* Descripción debajo de la imagen */
+.entrada-descripcion {
+  margin: 0;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 1.45;
+  font-family: "Lora", serif;
+  text-align: justify;
+}
 
-
-
+/* Efecto hover sobre la tarjeta */
+.entradas:hover .entrada-imagen img {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.685);
+  transform: scale(1.03);
+  filter: brightness(0.95);
+}
 
 
 /* ---------------PLATOS FUERTES----------------------------- */
+/* Menú lateral fijo para la sección de Platos Fuertes */
 #navegacion-menu {
     display: flex;
     flex-direction: column;
@@ -337,6 +324,7 @@ body {
     color: goldenrod;
 }
 
+/* Estados del menú al usar el checkbox */
 #check:checked ~ #navegacion-menu {
     transform: translateX(0);
 }
@@ -349,19 +337,92 @@ body {
     display: block;
 }
 
+/* Título principal de la sección Platos Fuertes */
 #titulo-platosfuertes{
     font-family: "Shippori Mincho", serif;
-    font-size: 6rem;
+    font-size: 4.5rem;
     text-align: center;
     color: rgb(255, 255, 255);
     margin: 0;
     letter-spacing: 1.3rem;
 }
 
+/* Grid general de las tarjetas de Platos Fuertes */
+.seccion-platos-fuertes {
+  width: 85%;
+  max-width: 1200px;
+  margin: 3.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+  gap: 7rem;
+  align-items: start;
+}
 
+/* Contenedor de cada tarjeta */
+.platos-fuertes{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  color: white;
+}
+
+/* Caja de la imagen con overlay y sombra */
+.platos-fuertes-imagen {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: black;
+  height: 25rem;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.486);
+}
+
+/* Imagen del platillo */
+.platos-fuertes-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+/* Título pequeño sobre la imagen */
+.platos-fuertes-titulo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 0.5rem;
+  background: rgba(66, 39, 24, 0.90);
+  color: goldenrod;
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  text-align: center;
+  letter-spacing: 0.02rem;
+}
+
+/* Descripción del platillo */
+.platos-fuertes-descripcion {
+  margin: 0;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 1.45;
+  font-family: "Lora", serif;
+  text-align: justify;
+}
+
+/* Efecto hover: zoom y sombreado */
+.platos-fuertes:hover .platos-fuertes-imagen img {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.685);
+  transform: scale(1.03);
+  filter: brightness(0.95);
+}
 
 
 /* ---------------POSTRES----------------------------- */
+/* Menú lateral desplegable */
 #navegacion-menu {
     display: flex;
     flex-direction: column;
@@ -377,6 +438,7 @@ body {
     z-index: 15;
 }
 
+/* Estilos generales de los enlaces del menú */
 #navegacion-menu a {
     text-decoration: none;
     color: white;
@@ -385,15 +447,18 @@ body {
     font-size: 2rem;
 }
 
+/* Hover del menú lateral */
 #navegacion-menu a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: goldenrod;
 }
 
+/* Mostrar menú cuando el checkbox está activo */
 #check:checked ~ #navegacion-menu {
     transform: translateX(0);
 }
 
+/* Ocultar icono abrir y mostrar cerrar cuando está activo */
 #check:checked ~ .abrir {
     display: none;
 }
@@ -402,81 +467,255 @@ body {
     display: block;
 }
 
+/* Título principal de la sección */
 #titulo-postres{
     font-family: "Shippori Mincho", serif;
-    font-size: 6rem;
+    font-size: 4.5rem;
     text-align: center;
     color: rgb(255, 255, 255);
     margin: 0;
     letter-spacing: 1.3rem;
 }
 
+/* Contenedor general tipo grid para las tarjetas */
+.seccion-postres {
+  width: 85%;
+  max-width: 1200px;
+  margin: 3.5rem auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas en escritorio */
+  gap: 7rem;
+  align-items: start;
+}
 
+/* Tarjeta individual */
+.postres{
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  color: white;
+}
+
+/* Contenedor de la imagen con sombra y overflow oculto */
+.postres-imagen {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: black; /* fallback */
+  height: 25rem; /* tamaño visual */
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.486);
+}
+
+/* Imagen ajustada al contenedor */
+.postres-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+/* Título pequeño sobre la imagen */
+.postres-titulo {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 0.5rem;
+  background: rgba(66, 39, 24, 0.90);
+  color: goldenrod;
+  font-family: "Shippori Mincho", serif;
+  font-size: 1.4rem;
+  border-radius: 1rem;
+  text-align: center;
+  letter-spacing: 0.02rem;
+}
+
+/* Descripción del postre */
+.postres-descripcion {
+  margin: 0;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 1.45;
+  font-family: "Lora", serif;
+  text-align: justify;
+}
+
+/* Efecto hover: zoom ligero y oscurecimiento */
+.postres:hover .postres-imagen img {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.685);
+  transform: scale(1.03);
+  filter: brightness(0.95);
+}
 
 
 /* ---------------BEBIDAS----------------------------- */
-#navegacion-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    position: fixed;
-    top: 30vh; /* pegado al header */
-    left: 0;
-    width: 25rem;
-    height: 50vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    transform: translateX(-100%);
-    transition: 0.3s ease;
-    z-index: 15;
+
+/* Menú lateral desplegable */
+#navegacion-menu { 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-evenly; 
+    position: fixed; 
+    top: 30vh; 
+    left: 0; 
+    width: 25rem; 
+    height: 50vh; 
+    background-color: rgba(0, 0, 0, 0.9); 
+    transform: translateX(-100%); 
+    transition: 0.3s ease; 
+    z-index: 15; 
+} 
+
+/* Estilos de los enlaces del menú */
+#navegacion-menu a { 
+    text-decoration: none; 
+    color: white; 
+    text-align: center; 
+    padding: 1.5rem; 
+    font-size: 2rem; 
+} 
+
+/* Hover de los enlaces */
+#navegacion-menu a:hover { 
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: goldenrod; 
+} 
+
+/* Mostrar menú al activar checkbox */
+#check:checked ~ #navegacion-menu { 
+    transform: translateX(0); 
+} 
+
+/* Alternar iconos abrir/cerrar */
+#check:checked ~ .abrir { 
+    display: none; 
+} 
+
+#check:checked ~ .cerrar { 
+    display: block; 
+} 
+
+/* Título principal de la sección */
+.titulo-bebidas{ 
+    font-family: "Shippori Mincho", serif; 
+    font-size: 4.5rem; 
+    text-align: center; 
+    color: rgb(255, 255, 255); 
+    margin: 0; 
+    letter-spacing: 1.3rem; 
+} 
+
+/* Contenedor grid de todas las bebidas */
+.seccion-bebidas { 
+    width: 85%; 
+    max-width: 1400px; 
+    margin: 3.5rem auto; 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 7rem; 
+    justify-items: center; 
+    align-items: start; 
+} 
+
+/* Tarjeta de bebida */
+.bebidas{ 
+    display: flex; 
+    flex-direction: column; 
+    gap: 0.8rem; 
+    color: white; 
+} 
+
+/* Contenedor de imagen con sombra y borde redondeado */
+.bebidas-imagen { 
+    position: relative; 
+    border-radius: 1rem; 
+    overflow: hidden; 
+    background: black; 
+    height: 30rem; 
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.486); 
+} 
+
+/* Imagen ajustada al contenedor */
+.bebidas-imagen img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+    transition: transform 0.35s ease; 
+} 
+
+/* Título sobre la imagen */
+.bebidas-titulo { 
+    position: absolute; 
+    bottom: 0; 
+    left: 50%; 
+    width: 100%; 
+    transform: translateX(-50%); 
+    display: inline-block; 
+    padding: 0.5rem; 
+    background: rgba(66, 39, 24, 0.90); 
+    color: goldenrod; 
+    font-family: "Shippori Mincho", serif; 
+    font-size: 1.4rem; 
+    border-radius: 1rem; 
+    text-align: center; 
+    letter-spacing: 0.2rem; 
+} 
+
+/* Descripción y texto dentro de cada tarjeta */
+.bebidas-descripcion {
+  margin: 0;
+  color: white;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-family: "Lora", serif;
+  text-align: start;
 }
 
-#navegacion-menu a {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 2rem;
+/* Fila para nombre-precio */
+.fila-precio { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%; 
+  padding: 0; 
 }
 
-#navegacion-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: goldenrod;
+/* Precio con peso visual */
+.fila-precio .precio {
+  font-weight: 700; 
+  display: inline-block; 
+  margin-left: 0.5rem;
 }
 
-#check:checked ~ #navegacion-menu {
-    transform: translateX(0);
+/* Nombre del tamaño ajustado */
+.fila-precio .tamaño-bebida {
+  display: inline-block;
+  max-width: calc(100% - 6rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-#check:checked ~ .abrir {
-    display: none;
+/* Hover, zoom en la imagen */
+.bebidas:hover .bebidas-imagen img { 
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.685); 
+    transform: scale(1.03); 
+    filter: brightness(0.95); 
 }
-
-#check:checked ~ .cerrar {
-    display: block;
-}
-
-#titulo-bebidas{
-    font-family: "Shippori Mincho", serif;
-    font-size: 6rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    margin: 0;
-    letter-spacing: 1.3rem;
-}
-
-
-
-
 
 
 
 /* ---------------PAQUETES----------------------------- */
+/* Menú lateral desplegable */
 #navegacion-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     position: fixed;
-    top: 30vh; /* pegado al header */
+    top: 30vh;
     left: 0;
     width: 25rem;
     height: 50vh;
@@ -486,6 +725,7 @@ body {
     z-index: 15;
 }
 
+/* Enlaces del menú */
 #navegacion-menu a {
     text-decoration: none;
     color: white;
@@ -494,15 +734,18 @@ body {
     font-size: 2rem;
 }
 
+/* Hover de los enlaces */
 #navegacion-menu a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: goldenrod;
 }
 
+/* Mostrar menú cuando el checkbox está activo */
 #check:checked ~ #navegacion-menu {
     transform: translateX(0);
 }
 
+/* Alternar iconos de abrir/cerrar menú */
 #check:checked ~ .abrir {
     display: none;
 }
@@ -511,11 +754,105 @@ body {
     display: block;
 }
 
+/* Título principal de la sección */
 #titulo-paquetes{
-    font-family: "Shippori Mincho", serif;
-    font-size: 6rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    margin: 0;
-    letter-spacing: 1.3rem;
+  font-family: "Shippori Mincho", serif;
+  font-size: 3.5rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 0;
+  letter-spacing: 0.4rem;
+  margin-bottom: 2rem;
 }
+
+/* Contenedor general de los paquetes */
+.seccion-paquetes {
+  width: 90%;
+  max-width: 1200px;
+  margin: 3.5rem auto;
+  padding: 1rem;
+}
+
+/* Tarjeta de paquete con imagen izquierda y descripción a la derecha */
+.paquete {
+  display:grid;
+  margin-bottom: 1rem;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 2rem;
+  align-items: center;
+  background: rgba(20,20,20,0.6);
+  padding: 1.2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.45);
+}
+
+/* Contenedor de la imagen del paquete */
+.paquete-imagen {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  max-height: 320px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.45);
+}
+
+.paquete-imagen img {
+  width: 100%;
+  height: 320px;;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+/* Hover con zoom ligero */
+.paquete:hover .paquete-imagen img {
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.685);
+  transform: scale(1.03);
+  filter: brightness(0.95);
+}
+
+/* Contenedor de los tres tamaños del paquete */
+.paquete-tamaños {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Tarjeta individual de cada tamaño */
+.tamaño {
+  background: rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(169deg,rgba(255, 255, 255, 0.10), rgba(136, 136, 136, 0), rgba(0, 0, 0, 0.65));
+  height: 190px;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  overflow: hidden;
+}
+
+/* Tipografía y contenido del tamaño */
+.tamaño-titulo {
+  margin: 0.4rem;
+  font-size: 2rem;
+  color: goldenrod;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 0.15rem;
+}
+
+.tamaño-descripcion {
+  margin: 0.7rem;
+  color: white;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  text-align: start;
+}
+
+.tamaño-precio {
+  margin: 0;
+  font-size: 1.5rem;
+  text-align: right;
+  color: goldenrod;
+}
+

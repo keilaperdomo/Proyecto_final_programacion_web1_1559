@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú いろは! - Iroha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>Menú いろは | Iroha – Cocina Japonesa Tradicional</title>
+    <meta name="description" content="Iroha es un restaurante de cocina japonesa tradicional en CDMX. Sabores auténticos, ambiente elegante y una experiencia inspirada en Japón.">
+    <meta name="keywords" content="menú japonés, comida japonesa, ramen, sushi, postres japoneses, bebidas japonesas, Iroha CDMX">
+    <meta name="authors" content="Diego Emmanuel Cabrera Brito, Ximena Solis Huerta, Keila Esmeralda Perdomo Hernández">
     <link rel="stylesheet" href="CSS/menu.css">
 </head>
 <body>
 
+    <!-- Encabezado y menú de hamburguesa -->
     <header id="encabezado">
         <input type="checkbox" id="check">
         <label for="check" class="abrir">☰</label>
@@ -16,6 +24,7 @@
         <h1 class="nombre-iroha">いろは</h1>
         <h2 class="titulo-menu">MENÚ</h2>
 
+        <!-- Menú para navegar en la página web -->
         <nav id="navegacion">
             <a href="menu.html">Menú</a>
             <a href="galeria.html">Galería</a>
@@ -25,34 +34,40 @@
         </nav>
     </header>
 
+    <!-- Contenedor principal del menú -->
     <main>
         <section class="contenedor-menu">
 
+            <!-- Tarjetas de categorías del menú -->
+            <!-- Categoría de Entredas -->
             <div class="comida-inicio" onclick="location.href='entradas.html'">
                 <h3>Entradas</h3>
                 <img src="imagenes/imagen1EntradasMenu.jpg" alt="imagen entradas">
             </div>
 
+            <!-- Categoría de Platos Fuertes -->
             <div class="comida-inicio" onclick="location.href='platosfuertes.html'">
                 <h3>Platos fuertes</h3>
                 <img src="imagenes/imagen2PlatosFuertesMenu.jpg" alt="imagen platos fuertes">
             </div>
 
+            <!-- Categoría de postres -->
             <div class="comida-inicio" onclick="location.href='postres.html'">
                 <h3>Postres</h3>
                 <img src="imagenes/imagen3PostresMenu.jpg" alt="imagen postres">
             </div>
 
+            <!-- Categoría de Bebidas-->
             <div class="comida-inicio" onclick="location.href='bebidas.html'">
                 <h3>Bebidas</h3>
                 <img src="imagenes/imagen4BebidasMenu.jpg" alt="imagen bebidas">
             </div>
 
+            <!-- Categoría de Paquetes -->
             <div class="comida-inicio solo" onclick="location.href='paquetes.html'">
                 <h3>Paquetes</h3>
                 <img src="imagenes/imagen5PaquetesMenu.jpg" alt="imagen paquetes">
             </div>
-
         </section>
     </main>
 
