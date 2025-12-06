@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/promociones.css">
-    <title>Promociones</title>
+    <title>Iroha – Cocina Japonesa Tradicional en CDMX - Promociones</title>
+    <meta name="description" content="Iroha es un restaurante de cocina japonesa tradicional en CDMX. Sabores auténticos, ambiente elegante y una experiencia inspirada en Japón.">
+    <meta name="keywords" content="restaurante japonés, comida japonesa, ramen, sushi, CDMX, Roma Norte, Iroha">
+    <meta name="author" content="Iroha">
 </head>
 <body>
+    <!-- Encabezado -->
     <header id="encabezado">
         <input type="checkbox" id="check">
         <label for="check" class="abrir">☰</label>
         <label for="check" class="cerrar">✕</label>
-
-        <h1 class="nombre-iroha">いろは</h1>
+        <!-- Titulo en japónes -->
+        <a href="https://youtu.be/dQw4w9WgXcQ?si=lGUoyKdkuNAlv0S1" class="nombre-iroha">いろは</a>
+        <!-- Título de la página  -->
         <h2 class="titulo-promociones">PROMOCIONES</h2>
-
+        <!--Menú de navegación-->
         <nav id="navegacion">
             <a href="menu.html">Menú</a>
             <a href="galeria.html">Galería</a>
@@ -23,5 +32,66 @@
             <a href="index.html">⌂</a>
         </nav>
     </header>
+    <!--------------------------------------------------------------------------------------------------------------->
+    <!-- Contenedor de las promociones -->
+    <section class="contenedor-promociones">
+        <!-- Promoción 1 - Tokyo Comfort -->
+        <div class="promociones">
+            <img src="imagenes/promo tokyo confort.jpg" alt="imagenchinchanchon" class="imagenpromocion">
+            <dl class="textopromocion">
+            <dt class="titulopromocion">
+                “Tokyo Comfort”
+            </dt>
+            <dh class="descripcionpromocion">
+                Classic Tokyo Ramen + Bebida caliente <small>(Matcha, Latte (chico), Capuchino (chico) o Espresso)</small>
+                <br>$410
+                <br><small>(Solo entre semana)</small>
+            </dh>
+            </dl>
+        </div>
+        <!-- Promoción 2 - Experiencia Wagyu Premium UwU -->
+        <div class="promociones">
+            <img src="imagenes/promo experiencia wagyu.jpg" alt="imagenexperienciawagyu" class="imagenpromocion">
+            <dl class="textopromocion">
+            <dt class="titulopromocion">
+                “Experiencia Wagyu Premium”
+            </dt>
+            <dh class="descripcionpromocion">
+                Un Wagyu Roastbeef Don + una botella de sake importado <small>(Hakkaisan o Shinsei)</small>
+                <br>$3,100
+                <br><small>(Solo en fines de semana)</small>
+
+            </dh>
+            </dl>
+        </div>
+        <!-- Promoción 3 - Tarde de Matcha Dulce -->
+        <div class="promociones">
+            <img src="imagenes/promo matcha dulce.jpg" alt="imagentardematcha" class="imagenpromocion">
+            <dl class="textopromocion">
+            <dt class="titulopromocion">
+                “Tarde de Matcha Dulce”
+            </dt>
+            <dh class="descripcionpromocion">
+            2x1 en Postres de Matcha: Pastel de Matcha o Matcha Garden
+            <br><small>(Aplica para el mismo postre o el de menor precio)
+            <br>(Válido de martes a jueves)</small>
+            </dh>
+            </dl>
+        </div>
+        <!-- Promoción 4 - Gozen Express -->
+        <div class="promociones">
+            <img src="imagenes/promo gozen express.jpg" alt="imagengozenexpress" class="imagenpromocion">
+            <dl class="textopromocion">
+            <dt class="titulopromocion">
+                “Gozen Express”
+            </dt>
+            <dh class="descripcionpromocion">
+            Nigiri Gozen <small>(chico)</small> + Bebida Fría Gratis <small>(limonada o naranjada chica)</small>
+            <br>$510
+            <br><small>(Válido de Lunes a Viernes de 1:00 pm a 4:00 pm)</small>
+            </dh>
+            </dl>
+        </div>
+    </section>
 </body>
 </html>

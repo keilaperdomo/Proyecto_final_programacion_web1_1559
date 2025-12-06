@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/galeria.css">
     <title>Galería</title>
 </head>
 <body>
+    <!-- Encabezado -->
     <header id="encabezado">
         <input type="checkbox" id="check">
         <label for="check" class="abrir">☰</label>
         <label for="check" class="cerrar">✕</label>
-
+        <!-- Titulo en japónes -->
         <h1 class="nombre-iroha">いろは</h1>
+        <!-- Título de la página  -->
         <h2 class="titulo-galeria">GALERÍA</h2>
-
+        <!--Menú de navegación-->
         <nav id="navegacion">
             <a href="menu.html">Menú</a>
             <a href="galeria.html">Galería</a>
@@ -23,6 +29,37 @@
             <a href="index.html">⌂</a>
         </nav>
     </header>
-    
+    <!--------------------------------------------------------------------------------------------------------------->
+    <!-- Contenedor de la galería -->
+    <main>
+        <!--Sección 1 -->
+        <section class="seccionimg">
+            <div class="contenedorimagengrande"><img src="imagenes/galeriainstalacion3.jpg" alt="imagenc1" class="imagengrandota"></div>
+            <div class="contenedorimagen"><img src="imagenes/classic ramen.jpg" alt="imagen2" class="imagennormal"></div>
+            <div class="contenedorimagen"><img src="imagenes/galeriarestaurante1.jpg" alt="imagen3" class="imagennormal"></div>
+            <div class="contenedorimagenancha"><img src="imagenes/galeriaevento3.jpg" alt="imagen4" class="imagenanchota"></div>
+        </section>   
+        <!--Sección 2 -->
+        <section class="seccionimg">
+            <div class="contenedorimagen"><img src="imagenes/galeriainstalacion2.jpg" alt="imagen2" class="imagennormal"></div>
+            <div class="contenedorimagen"><img src="imagenes/galeriaevento2.jpg" alt="imagen3" class="imagennormal"></div>
+            <div class="contenedorimagengrande"><img src="imagenes/galeriamemorable1.jpg" alt="imagenc1" class="imagengrandota"></div>            
+            <div class="contenedorimagenancha"><img src="imagenes/galeriarestaurante2.jpg" alt="imagen4" class="imagenanchota"></div>
+        </section>
+        <!--Sección 3 -->
+        <section class="seccionimg">
+            <div class="contenedorimagengrande"><img src="imagenes/galeriaevento.jpeg" alt="imagenc1" class="imagengrandota1"></div>
+            <div class="contenedorimagen"><img src="imagenes/galeriamemorable2.jpg" alt="imagen2" class="imagennormal"></div>
+            <div class="contenedorimagen"><img src="imagenes/sashimi2.jpg" alt="imagen3" class="imagennormal"></div>
+            <div class="contenedorimagenancha"><img src="imagenes/matcha garden2.jpg" alt="imagen4" class="imagenanchota"></div>
+        </section>   
+        <!--Sección 4 -->
+        <section class="seccionimg">
+            <div class="contenedorimagen"><img src="imagenes/galeriainstalacion1.jpg" alt="imagen2" class="imagennormal"></div>
+            <div class="contenedorimagen"><img src="imagenes/omakase.jpg" alt="imagen3" class="imagennormal"></div>
+            <div class="contenedorimagengrande"><img src="imagenes/galeriamemorable3.jpeg" alt="imagenc1" class="imagengrandota1"></div>            
+            <div class="contenedorimagenancha"><img src="imagenes/galeriarestaurante3.jpeg" alt="imagen4" class="imagenanchota"></div>
+        </section>
+    </main> 
 </body>
 </html>
